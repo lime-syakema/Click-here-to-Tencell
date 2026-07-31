@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Redirect</title>
+<title>Click here to. My name is SYAKEMAS👍</title>
 
 <style>
 html, body {
@@ -15,21 +15,33 @@ html, body {
 img {
     width: 100vw;
     height: 100vh;
-    object-fit: fill; /* 画面いっぱいに引き伸ばす */
+    object-fit: fill;
     display: block;
 }
 </style>
-
-<script>
-setTimeout(() => {
-    window.location.href = "https://roblox-slap-battles.fandom.com/wiki/Special:Random";
-}, 1000); // 1秒後に移動
-</script>
 
 </head>
 <body>
 
 <img src="image123.png" alt="画像">
+
+<audio id="sound" src="sound123.wav"></audio>
+
+<script>
+const audio = document.getElementById("sound");
+
+// 1秒後に音を鳴らす
+setTimeout(() => {
+    audio.play().catch(error => {
+        console.log("NO! MY PAGE IS BROKEN!:", error);
+    });
+}, 1000);
+
+// 音を鳴らしてからさらに1秒後（合計2秒後）に移動
+setTimeout(() => {
+    window.location.href = "https://roblox-slap-battles.fandom.com/wiki/Special:Random";
+}, 2000);
+</script>
 
 </body>
 </html>
